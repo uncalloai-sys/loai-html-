@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر فخامة | الأناقة العالمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --royal-gold: #c5a059;
+            --deep-black: #080808;
+            --surface: #151515;
+            --text-silver: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: var(--deep-black);
+            color: var(--text-silver);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            height: 90px;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            border-bottom: 2px solid var(--royal-gold);
+        }
+
+        .brand-logo { font-size: 28px; font-weight: 900; color: var(--royal-gold); text-decoration: none; }
+
+        nav ul { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--royal-gold); }
+
+        /* الأقسام مخفية افتراضياً ماعدا الرئيسي */
+        .section-container { padding: 40px 5%; display: none; }
+        #new-arrivals { display: block; }
+
+        .section-title {
+            text-align: right;
+            font-size: 1.8rem;
+            color: var(--royal-gold);
+            margin-bottom: 25px;
+            border-right: 4px solid var(--royal-gold);
+            padding-right: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .product-card img { width: 100%; height: 280px; object-fit: cover; }
+
+        .product-content { padding: 15px; text-align: center; }
+
+        .product-name { font-size: 15px; font-weight: bold; color: #fff; margin-bottom: 8px; }
+
+        .product-price { font-size: 19px; font-weight: 900; color: var(--royal-gold); margin-bottom: 15px; display: block; }
+
+        .buy-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--royal-gold);
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer { background: #000; padding: 30px; text-align: center; margin-top: 50px; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand-logo">فخامة LUXURY</a>
+        <nav>
+            <ul>
+                <li><a onclick="openTab('new-arrivals')">الرئيسية</a></li>
+                <li><a onclick="openTab('mens')">رجالي</a></li>
+                <li><a onclick="openTab('womens')">نسائي</a></li>
+                <li><a onclick="openTab('kids')">أطفال</a></li>
+                <li><a onclick="openTab('big-sizes')">شبابي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="new-arrivals" class="section-container">
+            <h2 class="section-title">✨ أحدث المنتجات</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="42.jpeg" alt="42" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">(موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                    </div>
+                <div class="product-card">
+                    <img src="43.jpeg" alt="43" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                    </div>
+                <div class="product-card">
+                    <img src="44.jpeg" alt="44" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="45.jpeg" alt="45" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="46.jpeg" alt="46" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="47.jpeg" alt="47" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="48.jpeg" alt="48" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="49.jpeg" alt="49" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">000,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="50.jpeg" alt="50" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="51.jpeg" alt="51" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="52.jpeg" alt="52" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="indian_girl.jpg" alt="طقم هندي">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">10,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="indian_girl.jpg" alt="طقم هندي">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">10,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="mens" class="section-container">
+            <h2 class="section-title">👔 قسم الرجال</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="10.jpeg" alt="10" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">هل تبجث عن بنطلون يجمع بين الراحة, والإناقة , والجودة ؟</h3>
+                        <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 5px; margin-bottom: 10px; font-size: 13px;">
+            📏 المقاسات: 29 | 30 | 31 | 32 | 33 | 34
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="womens" class="section-container">
+            <h2 class="section-title">👗 قسم النساء</h2>
+            <div class="product-grid">
+               <div class="product-card">
+                    <img src="24.jpeg" alt="24" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">6,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="27.jpeg" alt="27" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="30.jpeg" alt="30" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">(موسم 2026)</h3>
+                        <span class="product-price">5,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="28.jpeg" alt="28" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">6,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="29.jpeg" alt="29" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">   (موسم 2026)</h3>
+                        <span class="product-price">5,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="31.jpeg" alt="31" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="32.jpeg" alt="32" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name"> (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="33.jpeg" alt="33" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">  (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="37.jpeg" alt="37" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">6,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="41.jpeg" alt="41" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">5,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kids" class="section-container">
+            <h2 class="section-title"> قسم الأطفال وفوق عمر10</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="12.jpeg" alt="12" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 2 قطع (موسم 2026)</h3>
+                        <span class="product-price">5,700 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                 </div>
+                <div class="product-card">
+                    <img src="6.jpeg" alt="6" border="0">
+                    <div class="product-content">   
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">7,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="21.jpeg" alt="21" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">3,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="18.jpeg" alt="18" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">8,700 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="22.jpeg" alt="22" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">10,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="23.jpeg" alt="23" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 3 قطع (موسم 2026)</h3>
+                        <span class="product-price">6,700 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="16.jpeg" alt="16" border="0">
+                    <div class="product-content">
+                        <h5 class="product-name">طقم هندي 4 قطع (موسم 2026)</h5>
+                        <span class="product-price">11,700 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="14.jpeg" alt="14" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 5 قطع (موسم 2026)</h3>
+                        <span class="product-price">14,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="34.jpeg" alt="34" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="36.jpeg" alt="36" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="35.jpeg" alt="35" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">4,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="38.jpeg" alt="38" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">6,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="38.jpeg" alt="38" border="0">
+                    <div class="product-content">
+                        <h3 class="product-name">طقم هندي 4 قطع (موسم 2026)</h3>
+                        <span class="product-price">11,500 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="big-sizes" class="section-container">
+            <h2 class="section-title">📏 أحجام كبيرة</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="2..jpeg" alt="غير متوفر">
+                    <div class="product-content">
+                        <h3 class="product-name"> غير متوفر بعد هذا القسم</h3>
+                        <span class="product-price">00,000 ريال</span>
+                        <button class="buy-btn" onclick="location.href='https://wa.me/967772071972'">اطلب عبر واتساب</button>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <script>
+        // وظيفة بسيطة جداً لتبديل الأقسام
+        function openTab(id) {
+            // إخفاء كل الأقسام
+            document.querySelectorAll('.section-container').forEach(s => s.style.display = 'none');
+            // إظهار القسم المطلوب
+            document.getElementById(id).style.display = 'block';
+            // إظهار أحدث المنتجات دائماً إذا أردت
+            document.getElementById('new-arrivals').style.display = 'block';
+            
+            window.scrollTo({ top: document.getElementById(id).offsetTop - 100, behavior: 'smooth' });
+        }
+    </script>
+
+    <footer>
+        <p>متجر فخامة LUXURY - الحديدة | 772071972</p>
+    </footer>
+
+    <a href="https://wa.me/967772071972" style="position:fixed; bottom:20px; right:20px; background:#25d366; color:white; padding:15px; border-radius:50%; text-decoration:none; font-size:25px; z-index:3000;">📞</a>
+</body>
+</html>
